@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Inventory xmlns="http://example.org/inventory"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://example.org/inventory inventory.xsd"
+           generatedOn="2025-11-21"
+           currency="EUR">
+
+  <Metadata>
+    <Owner>Acme Corp</Owner>
+    <Location>Bucharest Warehouse #3</Location>
+    <Contact>
+      <Email>inventory@acmecorp.example</Email>
+      <Phone>+40-21-555-0101</Phone>
+    </Contact>
+    <Notes><![CDATA[Daily export for integration with ERP system. Do not edit generatedOn.]]></Notes>
+  </Metadata>
+
+  <Categories>
+    <Category id="c100" name="Electronics"/>
+    <Category id="c200" name="Home &amp; Garden"/>
+    <Category id="c300" name="Sporting Goods"/>
+  </Categories>
+
+  <Products>
+    <Product sku="E-0001" categoryRef="c100" discontinued="false">
+      <Name>Wireless Headphones Model X</Name>
+      <Description>Over-ear, active noise-cancelling, 30h battery life.</Description>
+      <Price amount="79.99" currency="EUR"/>
+      <Stock quantity="154" location="A3-R2"/>
+      <Dimensions unit="cm">
+        <Width>18.2</Width>
+        <Height>20.5</Height>
+        <Depth>7.3</Depth>
+      </Dimensions>
+      <AddedOn>2024-08-12</AddedOn>
+    </Product>
+
+    <Product sku="HG-0456" categoryRef="c200" discontinued="false">
+      <Name>Stainless Steel Kettle 1.7L</Name>
+      <Description>Fast-boil electric kettle, auto shut-off, BPA-free.</Description>
+      <Price amount="29.50" currency="EUR"/>
+      <Stock quantity="48" location="B1-R7"/>
+      <AddedOn>2025-02-03</AddedOn>
+      <Suppliers>
+        <Supplier id="s10">
+          <Name>KitchenPro Supplies</Name>
+          <LeadTimeDays>14</LeadTimeDays>
+        </Supplier>
+      </Suppliers>
+    </Product>
+
+    <Product sku="SP-900" categoryRef="c300" discontinued="true">
+      <Name>Carbon-Fiber Bicycle Pump</Name>
+      <Description>Lightweight pump with digital pressure gauge.</Description>
+      <Price amount="45.00" currency="EUR"/>
+      <Stock quantity="0" location="discontinued"/>
+      <AddedOn>2021-06-19</AddedOn>
+      <DiscontinuedOn>2025-06-01</DiscontinuedOn>
+    </Product>
+  </Products>
+
+  <Summary>
+    <TotalProducts>3</TotalProducts>
+    <TotalStockValue currency="EUR">17204.47</TotalStockValue>
+    <LastUpdated>2025-11-21T09:15:00+02:00</LastUpdated>
+  </Summary>
+
+</Inventory>

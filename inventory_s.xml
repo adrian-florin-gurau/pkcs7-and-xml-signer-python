@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Inventory xmlns="http://example.org/inventory" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://example.org/inventory inventory.xsd" generatedOn="2025-11-21" currency="EUR">
+
+  <Metadata>
+    <Owner>Acme Corp</Owner>
+    <Location>Bucharest Warehouse #3</Location>
+    <Contact>
+      <Email>inventory@acmecorp.example</Email>
+      <Phone>+40-21-555-0101</Phone>
+    </Contact>
+    <Notes>Daily export for integration with ERP system. Do not edit generatedOn.</Notes>
+  </Metadata>
+
+  <Categories>
+    <Category id="c100" name="Electronics"/>
+    <Category id="c200" name="Home &amp; Garden"/>
+    <Category id="c300" name="Sporting Goods"/>
+  </Categories>
+
+  <Products>
+    <Product sku="E-0001" categoryRef="c100" discontinued="false">
+      <Name>Wireless Headphones Model X</Name>
+      <Description>Over-ear, active noise-cancelling, 30h battery life.</Description>
+      <Price amount="79.99" currency="EUR"/>
+      <Stock quantity="154" location="A3-R2"/>
+      <Dimensions unit="cm">
+        <Width>18.2</Width>
+        <Height>20.5</Height>
+        <Depth>7.3</Depth>
+      </Dimensions>
+      <AddedOn>2024-08-12</AddedOn>
+    </Product>
+
+    <Product sku="HG-0456" categoryRef="c200" discontinued="false">
+      <Name>Stainless Steel Kettle 1.7L</Name>
+      <Description>Fast-boil electric kettle, auto shut-off, BPA-free.</Description>
+      <Price amount="29.50" currency="EUR"/>
+      <Stock quantity="48" location="B1-R7"/>
+      <AddedOn>2025-02-03</AddedOn>
+      <Suppliers>
+        <Supplier id="s10">
+          <Name>KitchenPro Supplies</Name>
+          <LeadTimeDays>14</LeadTimeDays>
+        </Supplier>
+      </Suppliers>
+    </Product>
+
+    <Product sku="SP-900" categoryRef="c300" discontinued="true">
+      <Name>Carbon-Fiber Bicycle Pump</Name>
+      <Description>Lightweight pump with digital pressure gauge.</Description>
+      <Price amount="45.00" currency="EUR"/>
+      <Stock quantity="0" location="discontinued"/>
+      <AddedOn>2021-06-19</AddedOn>
+      <DiscontinuedOn>2025-06-01</DiscontinuedOn>
+    </Product>
+  </Products>
+
+  <Summary>
+    <TotalProducts>3</TotalProducts>
+    <TotalStockValue currency="EUR">17204.47</TotalStockValue>
+    <LastUpdated>2025-11-21T09:15:00+02:00</LastUpdated>
+  </Summary>
+
+  <NewNode>test</NewNode>
+
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Id="Signature-3427863444"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><DigestValue>upF3AX25PIBrGbAS1pgsxxdC34Gwx2l//SPWyylNnzI=</DigestValue></Reference><Reference URI="#SignedProperties" Type="http://uri.etsi.org/01903#SignedProperties"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"><ns0:InclusiveNamespaces xmlns:ns0="http://www.w3.org/2001/10/xml-exc-c14n#" PrefixList="xades"/></Transform></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><DigestValue>aKV2BUUgivmYY7N18LNPtIxOeZIRxQS0mgAYVojXP+Q=</DigestValue></Reference></SignedInfo><SignatureValue>LJhkGMSuCjSWEJK/9omyI70F8YOWgas1jojjRpav1/Vic5amzx10G8dRDjhdH4A/dDPhH4DeX6O/BDbzm+fp01HHyKDUQgJEaB0A5YS0XIHDzSMRrJwzQopgelFhZHztgopokBpRBzEV5eGUl4mpAk3dGzWM4STdcCDmCrV7mOJHY7ff1CzknFUR9MTW7nnHfuI3smJ9g1ubdYdnuOeFu8QtcnsbI4PEYLG+hkpE3Ow7N3U+AFDBmpOuEp91MftY6KVWsvCs0hcRBGSJxnz3heJJKokVJkRTjVsiZJNPE8L0ZWKR7SzYvqeaGvssHzcA7HOMl5qIWbzaIdZvs0ZiwQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIDpTCCAo2gAwIBAgIUIhrV4/VlUuf7r/V8VvdY6K2antEwDQYJKoZIhvcNAQELBQAwEzERMA8GA1UEAwwITWFzdGVyQ0EwHhcNMjUxMTIyMjE0MzQ2WhcNMjgxMTIxMjE0MzQ1WjBZMQ8wDQYDVQQDDAZBZHJpYW4xFjAUBgNVBCoMDUFkcmlhbi1GbG9yaW4xDjAMBgNVBAQMBUd1cmF1MQwwCgYDVQQKDANJU00xEDAOBgNVBAYTB1JvbWFuaWEwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDMmtuJ7CykEssVyMLINXR06B2oG5V4PI7LfusMQpgPtcyZ79soaocB1zEU1IDpbRzaQnYkmxHVwCqE05vlrQYaA83vFO0y/HVZqa/PHXtN2bHk1xaxHYirk+cECXYKudEJ+7wNKksvfx0cilqYAhMx4gMvQtV6m5KVVcFKW0pgqNT4wLtRKI6p8RDHRmQ7cVtvTBQdJdVO7g/W4ANSqfmN/DqI3v00rogm1Qwhz5M58YPN//To/94r2WlyBWFF5Rpj5bO7zx1dv7j9bRuPNtzINvglAhfWqrd+1PCjZbWklSY71HYcZdSI27Wcc1XICO7IoVXGbUEyZuOIhN302vzZAgMBAAGjgaowgacwDAYDVR0TAQH/BAIwADAfBgNVHSMEGDAWgBQsSQznK3K3t/WwhjTVFFNRaGPg+DBHBggrBgEFBQcBAQQ7MDkwNwYIKwYBBQUHMAGGK2h0dHA6Ly9lamJjYTo4MC9lamJjYS9wdWJsaWN3ZWIvc3RhdHVzL29jc3AwHQYDVR0OBBYEFGh2mNTYxxJmlbGasbY1JKqjVw7qMA4GA1UdDwEB/wQEAwIHgDANBgkqhkiG9w0BAQsFAAOCAQEAR3dO9KBUyGj3RrZK68KRAGY4UnUD5cdKkWICIkreFV/HpwolJjsF0ph1co0pnXJL7T9nI8HcfN3pkwIzwFZfQA2Q4+rJ1adscZm3+8ftZKLLlqE8vevpFEDdKuGT4jjwlOoTWct5j2vEq1RIUdFZ0g4xGX3cjBfiharjYzefFg6KL9zrq8PRbDlo1ufo0tKf31o8t1J06mNv0NvnaVdr6AvCpgo3Y7Vg3YZ200Ru3pfdJPYd6pWqlnwm4Mt1bvAvqhDxlm5K19zVqf9vgugFDtLx4wTLEqXELeULvI7k9CHX1Unt1ixLFh3Ed0hTlClbutzlY8cVnaB0mllkyxicxQ==</X509Certificate></X509Data></KeyInfo><Object><xades:QualifyingProperties Target="#Signature-3427863444"><xades:SignedProperties Id="SignedProperties"><xades:SignedSignatureProperties><xades:SigningTime>2025-11-25T00:53:15Z</xades:SigningTime><xades:SigningCertificate><xades:Cert><xades:CertDigest><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><DigestValue>44a6/bw3HjVVLGgNNSqecfa4GzRzc9uutG0ge/xsjso=</DigestValue></xades:CertDigest><xades:IssuerSerial><X509IssuerName>CN=MasterCA</X509IssuerName><X509SerialNumber>194704138070360058498376663037842495818253901521</X509SerialNumber></xades:IssuerSerial></xades:Cert></xades:SigningCertificate></xades:SignedSignatureProperties></xades:SignedProperties></xades:QualifyingProperties></Object></Signature></Inventory>
